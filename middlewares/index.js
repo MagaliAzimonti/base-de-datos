@@ -2,11 +2,11 @@ const express = require("express")
 
 let admin = true
 
-const isAdmin = (req,res,next)=>{
-    if(admin){
+const isAdmin = (req, res, next) => {
+    if (admin) {
         next()
     }
-    else{
+    else {
         res.send("no tiene permiso para esta ruta")
     }
 }
